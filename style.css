@@ -1,0 +1,309 @@
+:root {
+    --primary: #E67E22;
+    --secondary: #2C3E50;
+    --dark: #333333;
+    --light: #F8F9FA;
+}
+
+html {
+    font-size: 15px;
+}
+
+html, body, body * {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    color: var(--dark);
+    font-weight: 400;
+    text-decoration: none;
+    list-style-type: none;
+    list-style: none;
+}
+
+h1 {
+    font-family: Merriweather;
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 5.8rem;
+    color: var(--primary);
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 3.2rem;
+}
+
+h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 2.5rem;
+    height: max-content;
+}
+
+p {
+    line-height: 1.35rem;
+}
+
+p > span {
+    font-weight: 600;
+}
+
+.button {
+    width: 188px;
+    background-color: #fff;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Merriweather;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--secondary);
+    text-align: center;
+}
+
+.button:hover {
+    background-color: var(--secondary);
+    color: #fff;
+}
+
+.navbar {
+    height: 112px;
+    background-color: var(--primary);
+    align-content: center;
+}
+
+.menus {
+    display: flex;
+    padding: 0;
+    gap: 171px;
+    justify-content: center;
+}
+
+.menu > a {
+    font-family: Poppins;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color : var(--secondary);
+    position: relative;
+}
+
+.menu > a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 66%;
+    height: 2px;
+    background-color: var(--secondary);
+}
+
+.banner {
+    position: relative;
+    height: 700px;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.33);
+    z-index: 1;
+  }
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.banner-text > h1,
+.banner-text > p {
+    align-self: center;
+    text-align: center;
+}
+
+.banner-text > p {
+    width: 77%;
+}
+
+.receipe-info {
+    position: absolute;
+    bottom: 12%;
+    left: 3%;
+    border-collapse: collapse;
+    z-index: 2;
+}
+
+.receipe-info tr {
+    border-bottom: 3px solid var(--primary);
+    position: relative;
+}
+
+.receipe-info tr:last-child {
+    border-bottom: none;
+}
+
+.receipe-info td {
+    color: var(--primary);
+    padding: 6px 15px;
+    font-size: 1.3rem;
+}
+
+.receipe-info tr > td:last-child {
+    width: 200px;
+}
+
+.receipe-info td:first-child {
+    border-right: 3px solid var(--primary);
+}
+
+main {
+    background: var(--light);
+    margin: 0 140px;
+    padding: 50px 35px;
+}
+
+main h2 {
+    margin-bottom: 50px;
+}
+
+main section {
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.card {
+    display: flex;
+    gap: 49px;
+}
+
+.card div {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.card > img {
+    width: 505px;
+    height: 284px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: var(--primary);
+    margin: 0 ;
+    padding: 50px 140px 35px 140px;
+}
+
+footer nav {
+    display: flex;
+}
+
+footer ul {
+    width: 33%;
+}
+
+footer a {
+    text-transform: capitalize;
+}
+
+footer hr {
+    margin: 26px 0;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.ingredient-list, .step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ingredient-list > li {
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.step-list > li {
+    list-style: decimal;
+    list-style-position: inside;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 200px;
+    gap: 100px;
+}
+
+.contact > div {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+form input,
+form textarea {
+    outline: none;
+    border: solid 1px var(--dark);
+    padding: 10px;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+form > .button {
+    align-self: center;
+}
